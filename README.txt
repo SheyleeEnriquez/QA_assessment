@@ -20,6 +20,7 @@ QA_ASSESSMENT/
 │   │   ├── InventoryPage.js
 │   │   └── LoginPage.js
 │   ├── reports/
+│   ├── screenshots/
 │   └── support/
 ├── docs/
 │   ├── e2e_readme.txt
@@ -36,7 +37,7 @@ Requirements
 
 Installation
 1. Clone the repository:
-   git clone <REPOSITORY_URL>
+   git clone https://github.com/SheyleeEnriquez/QA_assessment.git
 2. Install dependencies:
    npm install
 
