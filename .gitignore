@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+
+# Cypress videos and screenshots
+cypress/videos/
+cypress/screenshots/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# Cypress cache
+.cypress-cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Test reports
+reports/
+coverage/

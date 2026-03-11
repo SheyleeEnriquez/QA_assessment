@@ -1,0 +1,23 @@
+API Conclusions - Petstore
+
+All 10 test cases were executed. The main pet management operations
+were validated across 4 endpoints.
+
+What was confirmed:
+- A pet can be created and all response fields match the expected contract.
+- The created pet is retrievable by ID with correct data.
+- Name and status updates are applied correctly and persist when verified
+  with a subsequent GET request.
+- The findByStatus endpoint returns the expected results for valid statuses.
+
+Bugs identified:
+- POST /pet accepts an empty body and returns 200 instead of a validation error.
+  A request without required fields should return 400 or 405.
+- PUT /pet returns 200 when updating a non-existent ID instead of 404.
+  This does not follow REST standards and makes it impossible
+  to distinguish between a successful update and an implicit creation.
+
+Other observations:
+- The API uses 200 for successful creation instead of 201.
+- findByStatus returns 200 with results for unrecognized status values
+  instead of 400, which is permissive but not blocking.

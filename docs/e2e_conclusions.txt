@@ -1,0 +1,20 @@
+E2E Conclusions - Saucedemo
+
+The automated tests covered the main purchase flow and one negative scenario.
+All 5 test cases passed successfully.
+
+Functional findings:
+- The full purchase flow works as expected, from login to order confirmation.
+- Form validation behaves correctly, showing specific error messages per field.
+
+Technical decisions:
+- Page Object Model was applied to separate test logic from selectors,
+  making the suite easier to maintain and scale.
+- Atomic methods with fluent interface were used in the page classes,
+  allowing readable action chaining in the specs.
+- A beforeEach() hook handles login before each test, ensuring
+  isolation between cases and avoiding state leakage.
+- Test data is externalized in fixtures/user.json, keeping credentials
+  out of the spec files.
+- Selectors are based on data-test attributes provided by the application,
+  which are more stable than CSS classes under UI changes.
